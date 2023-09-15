@@ -3,8 +3,20 @@ const removeFromArray = function(array) {
     // of the function in argument[0]
     // Since arguments[0] = array
     // arguments[1] = item to be excluded.
-    let itemsToRemove = arguments[0].indexOf(arguments[1]);
-    array.splice(itemsToRemove, 1)
+    let itemsToRemove;
+    console.log(arguments.length);
+    // Loops through the amount of arguments and slowly slices all the characters out of the array, one by one.
+    for (let i = 1; i < arguments.length; i++) {
+        itemsToRemove = array.indexOf(arguments[i]);
+        // -1 indicates an element that does  not exist within the array. Therefore skipping it with continue;
+        if (itemsToRemove == -1) {
+            continue;
+        }
+        else {
+            console.log(i);
+            array.splice(itemsToRemove, 1);
+        };  
+    };
     return array;
     // // When  logging  arguments, you can see the placement of each argument,
     // // Therefore we can say rather definitively that anything inside an array
