@@ -29,8 +29,9 @@ const multiply = function(multiplyArray) {
   return result;
 };
 
-const power = function() {
-	
+const power = function(number, exponent) {
+  // Raise a number to its exponent.
+  return number**exponent;
 };
 
 const factorial = function() {
