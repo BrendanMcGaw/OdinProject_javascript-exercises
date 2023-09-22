@@ -1,22 +1,14 @@
+// Purpose of this exercise is to understand how to utilise maps.
+// Have another look at maps and see what you can do with that information.
 
-
-const getTheTitles = function() {
-    const books = [
-        {
-          title: 'Book',
-          author: 'Name'
-        },
-        {
-          title: 'Book2',
-          author: 'Name2'
-        }
-      ]
-    const bookTitles = [];
-    for (let i = 0; i < books.length; i++) {
-        bookTitles.push(books[i].title);
-    }
-    return bookTitles;
+const getTheTitles = function(books) {
+  // Tough one, the books.map is mapping the the array, to our new array.
+  // By creating our function inside of the map, we are able to select the book titles of the seperate array and store them in our new one??
+  const bookTitles = books.map((book) => book.title);
+  console.log(bookTitles);
+  return bookTitles;
 };
 
 // Do not edit below this line
+
 module.exports = getTheTitles;
